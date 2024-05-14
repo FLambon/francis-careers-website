@@ -24,28 +24,47 @@
     }
 
     #container{
+      width:70%;
       text-align:center;
       align-items:center;
       margin: 0 auto;
+    }
+
+    .button{
+      text-align:center;
     }
   </style>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Francis Careers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>{{company_name}} Careers</title>
 </head>
 <body>
-  <div id='container'>
-      <h1>Francis Careers</h1>
+  <div class="container">
+      <h1 class="text-center mt-4 mb-4" >{{company_name}} Careers</h1>
       <img src="/static/text2.webp" alt="tree" height='300px'>
-      <h2>About Francis</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada ac est id porttitor. Praesent euismod porta egestas. Mauris aliquet elit ut efficitur laoreet. Donec vitae commodo elit, in vulputate leo. Etiam ut ultrices nulla. Praesent a neque eget mauris condimentum elementum. Suspendisse congue at ex non varius. Suspendisse tincidunt fermentum ipsum.
+      <h2 class="text-center mt-4 mb-4">About Francis</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada ac est id porttitor. Praesent euismod porta egestas. Mauris aliquet elit ut efficitur laoreet. Donec vitae commodo elit, in vulputate leo. Etiam ut ultrices nulla. Praesent a neque eget mauris condimentum elementum. Suspendisse congue at ex non varius. Suspendisse tincidunt fermentum ipsum.
     
       Integer posuere eros eget eros mattis elementum. Quisque nisi elit, scelerisque id odio non, rutrum molestie justo. Duis quis urna augue. Donec eu ornare mi. Proin rhoncus nulla rutrum nisi tincidunt sollicitudin. Proin nec iaculis est. Nunc nec felis leo. Proin aliquam dignissim risus. Suspendisse potenti. Praesent sem lorem, ornare ac nisi ut, facilisis aliquam ipsum. Fusce sed lorem consequat, sodales ipsum non, ultrices leo.
     
       Nulla maximus sapien non erat dapibus pharetra. Fusce tristique tellus at mattis suscipit. In blandit sagittis dolor ac imperdiet. Suspendisse semper, libero in pulvinar lacinia, leo nunc feugiat ex, ut iaculis mi mi eget orci. Mauris scelerisque mollis lorem. Nam sit amet neque magna. Quisque sed eros scelerisque risus auctor volutpat non vestibulum mauris. In pulvinar velit tellus, vitae mollis dui fermentum eu. Donec dui turpis, consectetur ut sodales non, feugiat aliquam tellus. Duis non ex neque. Ut vel dui pellentesque, facilisis metus eget, mollis lacus.</p>
-      <h2>Open Positions</h2>
-      <button>Contuct Us</button>
+    
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+  
+    <p class="text-center mt-2 mb-4">
+      TODO - Show the jobs here
+    </p>
+    <div class='button'>
+      <button class="btn btn-primary btn-lg mt-2 mb-4">Contuct Us</button>
+      <p>Copyright 2023, Francis</p>  
     </div>
+      
+  </div>
 </body>
 </html>
