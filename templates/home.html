@@ -8,9 +8,10 @@
       text-align: center;
       
     }
-    img{
+    #banner{
       width: 100%;
       object-fit:cover;
+      margin-bottom: 20px;
     }
     h2{
       font-family: normal;
@@ -33,6 +34,7 @@
     .button{
       text-align:center;
     }
+    
   </style>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,16 +44,22 @@
 </head>
 <body>
   {% include 'nav.html' %}
-  
+  <img id= "banner" src="/static/text2.webp" alt="tree" height='300px'>
   <div class="container">
       <h1 class="text-center mt-4 mb-4" >{{company_name}} Careers</h1>
-      <img src="/static/text2.webp" alt="tree" height='300px'>
-      <h2 class="text-center mt-4 mb-4">About Francis</h2>
+    <div class='row' style="margin-bottom:16px; "'>
+    <div class='col-md-6''>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada ac est id porttitor. Praesent euismod porta egestas. Mauris aliquet elit ut efficitur laoreet. Donec vitae commodo elit, in vulputate leo. Etiam ut ultrices nulla. Praesent a neque eget mauris condimentum elementum. Suspendisse congue at ex non varius. Suspendisse tincidunt fermentum ipsum.
     
       Integer posuere eros eget eros mattis elementum. Quisque nisi elit, scelerisque id odio non, rutrum molestie justo. Duis quis urna augue. Donec eu ornare mi. Proin rhoncus nulla rutrum nisi tincidunt sollicitudin. Proin nec iaculis est. Nunc nec felis leo. Proin aliquam dignissim risus. Suspendisse potenti. Praesent sem lorem, ornare ac nisi ut, facilisis aliquam ipsum. Fusce sed lorem consequat, sodales ipsum non, ultrices leo.
-    
-      Nulla maximus sapien non erat dapibus pharetra. Fusce tristique tellus at mattis suscipit. In blandit sagittis dolor ac imperdiet. Suspendisse semper, libero in pulvinar lacinia, leo nunc feugiat ex, ut iaculis mi mi eget orci. Mauris scelerisque mollis lorem. Nam sit amet neque magna. Quisque sed eros scelerisque risus auctor volutpat non vestibulum mauris. In pulvinar velit tellus, vitae mollis dui fermentum eu. Donec dui turpis, consectetur ut sodales non, feugiat aliquam tellus. Duis non ex neque. Ut vel dui pellentesque, facilisis metus eget, mollis lacus.</p>
+    </p>
+      </div>
+     
+    <div class='col-md-6'>
+      <img src="/static/work.jpg" alt="work" style=" height: auto; width:100%; object-fit:cover; border-radius:4px;">
+    </div>
+
+  </div>
     
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     
